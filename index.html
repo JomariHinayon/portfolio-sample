@@ -19,9 +19,6 @@
     <!-- Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    
-    <!-- My Javascript -->
-    <script src="js/my.js"></script>
 
     <!-- React script -->
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -31,9 +28,9 @@
 <body >
 
     <!-- navbar -->
-    <div id="my-nav"class="row main-navbar">
+    <div id="my-nav" class="row main-navbar container">
         <div class="col-12 mx-auto position-absolute">
-            <nav id="navbar_top" class="navbar my-navbar navbar-expand-lg navbar-dark shadow-5-strong">
+            <nav id="navbar_top" class="navbar fixed-top my-navbar navbar-expand-lg navbar-dark shadow-5-strong">
                 <div class="container-fluid">
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
@@ -43,18 +40,18 @@
                   <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 ">
                       <li class="nav-item ">
-                        <a class="nav-link" href="#section-home">Home</a>
+                        <a class="nav-link home" href="#section-home">Home</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item about">
                         <a class="nav-link" href="#section-about">about</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#section-portfolio">portfolio</a>
+                      <li class="nav-item projects">
+                        <a class="nav-link" href="#section-portfolio">Projects</a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#section-resume" >Experience</a>
+                      <li class="nav-item skills">
+                        <a class="nav-link" href="#section-skills" >Skills</a>
                       </li>
-                      <li class="nav-item">
+                      <li class="nav-item contacts">
                         <a class="nav-link" href="#section-contact">Contact</a>
                       </li>
                     </ul>
@@ -65,15 +62,17 @@
     </div>
 
     <!--- HOME -->
-    <div id="particles-js" background-image="">
+    <div id="particles-js" >
     <section id="section-home" class="home-menu">
-      <div class="container">
-        <div class="row  intro">
-          <div class=" col-md-12 intro-text">
-            <h1 class="intro-greet">Hello, I'm </h1>
-            <h1 class="intro-name"><strong> Jomari <span>Hinayon</span></strong></h1>
-            <strong class="intro-resume">and this is my resume</strong>
-          </div>  
+      <div class="container ">
+        <div class="row">
+          <div class=" col-md-6 col-sm-12 mt-5 pb-5 container-intro-text text-center">
+            <p class="h1"><span class="intro-name"></span></p>
+            <strong class="intro-resume">Web Developer</strong>
+          </div>
+          <div class=" col-md-6 col-sm-12 text-center">
+            <img class="img-fluid cartoon" src="./images/cartoon1.png"/>
+          </div>    
         </div>
       </div>    
     </div>
@@ -86,9 +85,10 @@
         <div class="row mb-5 align-items-center">
           <div class="section-heading text-center col-md-12">
             <h2>About <strong>Me</strong></h2>
+            <hr class="line"/>
           </div>
             <div class="col-lg-5 pr-lg-5 mb-5 mb-lg-0 my-pic-container">
-              <img src="images/pic.jpg" alt="My Picture" class="img-fluid mx-auto d-block">
+              <img src="images/pic-removebg.png" alt="My Picture" class="img-fluid mx-auto d-block">
             </div>
             <div class="col-lg-6 pl-lg-5">
               <div class="about-me-text">
@@ -109,124 +109,98 @@
         </div>
       </div>
     </section>
-    <!-- Portflio -->
+    <!-- Projects -->
     
-    <section id="section-portfolio" class="my-section" >  
+    <section id="section-portfolio" class="my-section container" >  
+      <div class="row">
+        <div class="section-heading text-center col-md-12">
+          <h2>My<strong>Projects</strong></h2>
+          <hr class="line"/>
+        </div>
+        <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="./images/tenzies-game.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="./images/2Dgame.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./images/netflix-clone.png" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills --> 
+    <section id="section-skills" class="my-section">
       <div class="container">
-        <div class="row">
+        <div class="row ">
           <div class="section-heading text-center col-md-12">
-            <h2>Featured <strong>Projects</strong></h2>
+            <h2>My <strong>Skills</strong></h2>
+            <hr class="line"/>
           </div>
-          <div class="filters-content">
-            <div class="container-fluid portfolio-content">
-            <div class="row grid">
-              <div class="portfolio-row col-sm-4 all">
-                <div class="relative">
-                  <div class="thumb">
-                    <div class="overlay overlay-bg">
-                      <a href="https://github.com/JomariHinayon/Game-Dev"><image class="img-fluid" src="images/space-shooter.png" alt="projects"></image></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-inner">
-                  <h4>Space Shooter</h4>
-                  <h6>games</h6>
-                </div>
-              </div>
-              <div class="portfolio-row col-sm-4 all">
-                <div class="relative">
-                  <div class="thumb">
-                    <div class="overlay overlay-bg">
-                      <a href="https://github.com/JomariHinayon/Tenzies-Game" target="_blank"><image class="img-fluid" src="images/tenzies-game.png" alt="projects"></image></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-inner">
-                  <h4>Tenzie Game</h4>
-                  <h6>Games</h6>
-                </div>
-              </div>
-              <div class="portfolio-row col-sm-4 all">
-                <div class="relative">
-                  <div class="thumb">
-                    <div class="overlay overlay-bg">
-                      <a href="#"><image class="img-fluid" src="images/2Dgame.png" alt="projects"></image></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-inner">
-                  <h4>Java 2D Game</h4>
-                  <h6>Games</h6>
-                </div>
-              </div>
-              <div class="portfolio-row col-sm-4 all">
-                <div class="relative">
-                  <div class="thumb">
-                    <div class="overlay overlay-bg">
-                      <a href="#"><image class="img-fluid" src="images/netflix-clone.png" alt="projects"></image></a>
-                    </div>
-                  </div>
-                </div>
-                <div class="p-inner">
-                  <h4>Netflix Clone Website</h4>
-                  <h6>Website</h6>
-                </div>
-              </div>
+          <div class="col-md-2 text-center ">
+            <div class="container-skill">
+              <img src="images/html5-logo.png" class="img-fluid">
             </div>
+            <p>HTML5</p>
           </div>
+          <div class="col-md-2 text-center ">
+            <div class="container-skill">
+            <img src="images/css-logo.png" class="img-fluid">
+            </div>
+            <p>CSS3</p>
+          </div>
+          <div class="col-md-2 text-center ">
+            <div class="container-skill">
+              <img src="images/js-logo.png" class="img-fluid">
+            </div>
+            <p>JavaScript</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="container-skill">
+              <img src="images/jQuery.png" class="img-fluid" style="border-radius: 5%;">
+            </div>
+            <p>HTML5</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="container-skill">
+              <img src="images/react-logo.png" class="img-fluid">
+            </div>
+            <p>React</p>
+          </div>
+          <div class="col-md-2 text-center">
+            <div class="container-skill">
+            <img src="images/php-logo.png" class="img-fluid">
+            </div>
+            <p>PHP</p>
+          </div>
+          </div>
+          <div class="row col-md-12 justify-content-center">
+            <div class="col-md-2 text-center">
+              <div class="container-skill">
+              <img src="images/java-logo.png" class="img-fluid">
+              </div>
+              <p>Java</p>
           </div>
         </div>
       </div>
     </section>
-
-    <!--- Resume -->
-
-    <section id="section-resume" class="my-section">
-      <div class="container">
-        <div class="row">
-          <div class="section-heading text-center col-md-12 mb-5">
-            <h2>My <strong>Resume</strong></h2>
-          </div>
-          <div class="col-md-12 resume-content">
-            <h2 class="mb-5">Educational Background</h2>
-            <div class="resume-item mb-4">
-              <span class="date">
-                <span class="icon-calendar"></span>
-                February 2022 - Present
-              </span>
-              <h3>First Year College</h3>
-              <p>I'm a first year college in STI San Jose Del Monte Bulacan taking the course of Bachelor of Science 
-                Major in Computer Science which is a four-year college course.
-              </p>
-              <span class="school-level">College - STI</span>
-            </div>
-            <div class="resume-item mb-4">
-              <span class="date">
-                <span class="icon-calendar"></span>
-                July 2021 - Past 
-              </span>
-              <h3>Senior High Student</h3>
-              <p>In my senior high days I've taken the strand ICT (Information and Communication Technologies) major in computer programming.
-                The programming language that I've learned are Java, Javascript, mySQL and mark up langgauge like html and css.
-              </p>
-              <span class="school-level">Senior High School - KVSHS</span>
-            </div>
-            <div class="resume-item mb-4">
-              <span class="date">
-                <span class="icon-calendar"></span>
-                March 2018 - Past
-              </span>
-              <h3></h3>
-              <p>Computer System Servicing or CSS is the course that I've taken in my junior high in which I learned the foundation of the computer and it's hardware components.
-                I have now my <a href="#">NCII</a> in Computer System Servicing.
-              </p>
-              <span class="school-level">Junior High School - TNTS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
 
     <!-- CONTACT ME-->
 
@@ -235,6 +209,7 @@
         <div class="row mb-5 align-items-center">
           <div class="section-heading text-center col-md-12">
             <h2>Get <strong>In Touch</strong></h2>
+            <hr class="line"/>
           </div>
           <div class="col-md-12 text-center">
            <a href="https://www.facebook.com/jo.mari.3382/" target="_blank"><i class="bi bi-facebook"></i></a>
@@ -246,12 +221,16 @@
       </div>
     </section>
 
+
+
     <!-- My Jquery -->
     <script src="js/jquery.js"></script>
 
     <!-- scripts -->
-    <script src="js/particles.js"></script>
-    <script src="js/app.js"></script>>
-        
+    <script src="js/particles/particles.js"></script>
+    <script src="js/animation.js"></script>>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/typed/type-writer-effect.js"></script>
+    <script src="js/particles/modify-particles.js"></script>
 </body>
 </html>
